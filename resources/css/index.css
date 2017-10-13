@@ -7,12 +7,14 @@ html {
 	text-align: center;
 }
 body {
-	display: flex;
-	flex-direction: column;
 	width: 100%;
 	margin: 0 0px;
 	padding: 0 0px;
 }
+h2, h4 {
+	margin: 0 0px;
+}
+
 
 .header {
 	z-index: 50;
@@ -20,7 +22,7 @@ body {
 	height: 69px;
 	width: 100%;
 	border-bottom: 1px solid seashell;
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background-color: black;
@@ -36,27 +38,25 @@ body {
 	justify-content: space-around;
 	flex-wrap: nowrap;
 }
-
 .header nav li {
 	display: inline-block;
 	text-decoration: underline;
 	padding: 0 10px;
 }
-
 .header a {
 	color: seashell;
 }
 
-.mission {
+
+.content {
 	position: relative;
-	top: 69px;
-	display: inline-flex;
-	height: 700px;
-	width: 1200px;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-	background-image: url("../images/img-mission-background.jpg");
+	top: 69px;
 }
+
+
 .banner {
 	background-color: black;
 	width: 100%;
@@ -65,8 +65,77 @@ body {
 	justify-content: space-around;
 	height: 100px;
 }
-.banner h2,
-.banner h4{
-	margin: 0 0px;
+
+
+.mission {
+	display: flex;
+	height: 700px;
+	width: 1200px;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../images/img-mission-background.jpg");
+	margin-bottom: 50px;
 }
 
+
+.featured {
+	display: block;
+	flex-direction: row;
+	width: 1000px;
+	flex-shrink: 0;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+.feature {
+	flex-direction: column;
+	display: inline-flex;
+	width: 300px;
+	margin: 10px;
+}
+.feature img {
+	height: 200px;
+	margin-bottom: 10px;
+}
+
+
+.locations {
+	width: 1200px;
+	height: 500px;
+	padding-top: 50px;
+	align-items: center;
+	flex-direction: row;
+	flex-shrink: 0;
+	background-image: url("../images/img-locations-background.jpg");
+}
+.location {
+	margin: 15px 20px;
+	width: 300px;
+	height: 300px;
+	opacity: 1;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: black;
+}
+
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.copyright {
+	display: flex;
+	width: 100%;
+	align-items: flex-start;
+	font-weight: bold;
+	margin: 20px 0;
+}
+.copyright p {
+	padding-left: 20px;
+}
